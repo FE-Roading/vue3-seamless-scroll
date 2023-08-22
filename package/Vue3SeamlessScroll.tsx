@@ -186,7 +186,7 @@ const Vue3SeamlessScroll = defineComponent({
           "," +
           props.ease.y2 +
           ")"
-          } ${props.delay}ms`,
+          } 0ms`,
         overflow: "hidden",
         display: props.singleLine ? "flex" : "block",
       };
@@ -320,6 +320,7 @@ const Vue3SeamlessScroll = defineComponent({
         _count.value = 0;
         return;
       }
+
       animation(
         props.direction as "up" | "down" | "left" | "right",
         step.value,
@@ -433,7 +434,11 @@ const Vue3SeamlessScroll = defineComponent({
 
     onMounted(() => {
       if (isScroll.value) {
-        initMove();
+        if (props.delay) {
+          singleWaitTimeout.value = setTimeout(initMove, props.delay);
+        } else {
+          initMove();
+        }
       }
     });
 

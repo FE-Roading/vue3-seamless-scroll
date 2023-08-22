@@ -69,7 +69,7 @@
 
   <div class="scroll">
     <div>单行停顿时间</div>
-    <vue3-seamless-scroll :list="list" :singleHeight="27" :singleWaitTime="3000">
+    <vue3-seamless-scroll :list="list" :singleHeight="27" :singleWaitTime="3000" :delay="3000" wheel hover>
       <div class="item" v-for="(item, index) in list" :key="index">
         <span>{{ item.title }}</span>
         <span>{{ item.date }}</span>
