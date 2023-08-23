@@ -4,6 +4,26 @@ Vue3.0 无缝滚动组件，支持Vite2.0，支持服务端打包
 
 > 目前组件支持上下左右无缝滚动，单步滚动，并且支持复杂图标的无缝滚动，目前组件支持平台与`Vue3.0`支持平台一致。
 
+## 直接引用
+```json
+{
+  ...
+  "dependencies": {
+    "remember-scroll": "git+ssh://git@github.com:FE-Roading/vue3-seamless-scroll.git",
+  },
+}
+```
+
+以`git tag`的方式引用，可以防止以后你有对该github项目有了新的改动，不至于影响到业务。具体做法是在后面加上#tag,如：
+```json
+{
+  ...
+  "dependencies": {
+    "remember-scroll": "git+ssh://git@github.com:FE-Roading/vue3-seamless-scroll.git#2.0.2",
+  },
+}
+```
+
 ## 效果展示
 
 <div align=center>
